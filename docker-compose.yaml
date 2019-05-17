@@ -1,0 +1,18 @@
+version: '3'
+services:
+  raster-baselayers:
+    build: .
+    container_name: raster-baselayers
+    networks:
+      - default
+    volumes:
+      - ./datasets:/datasets
+    environment:
+      - KEY=VAL
+    command: /bin/bash
+    working_dir: /datasets
+networks:
+  default:
+    external: false
+volumes:
+  raster_baselayers_volume:
