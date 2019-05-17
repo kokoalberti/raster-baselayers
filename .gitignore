@@ -1,3 +1,4 @@
 .env
 datasets/*/tmp
 datasets/*/src
+datasets/*/dist
