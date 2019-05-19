@@ -2,9 +2,12 @@
 
 WorldClim is a set of global climate layers (gridded climate data) with a spatial resolution of about 1 km2. These data can be used for mapping and spatial modeling. 
 
-## Monthly Precipitation 1970-2000
+## Availability
 
-Stored in a 12-band optimized GTiff at `s3://geofolio-raster-baselayers/worldclim/prec.tif`.
+
+| Layer              | URL                                                                            |
+| ------------------ | ------------------------------------------------------------------------------ |
+| Precipitation      | `s3://geofolio-raster-baselayers/worldclim/v1/prec.tif`                        |
 
 ## Processing Notes
 
