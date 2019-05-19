@@ -3,6 +3,7 @@
 Set of Makefiles to download, optimize, and upload a selection of public
 raster datasets to AWS S3. 
 
-* [GlobCover](datasets/globcover/)
-* [WorldClim](datasets/worldclim/)
-* [SoilGrids](datasets/soilgrids/)
+* [globcover](datasets/globcover/)
+* [worldclim](datasets/worldclim/)
+* [soilgrids](datasets/soilgrids/)
+* [usgs_ecotapestry](datasets/usgs_ecotapestry)
