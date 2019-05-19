@@ -1,18 +1,22 @@
-all: download process upload clean
+VERSION=v1
 
-download:
-	@echo Downloading...
-	mkdir -p src
-	cd src && wget -i ../filelist.txt -c
+all: process sync clean
 
-process:
+init:
+	mkdir -p src tmp dist
+
+process: globcover.tif
 	@echo Processing...
-	mkdir -p tmp dist
-	gdal_translate -co TILED=YES -co COMPRESS=DEFLATE -co PREDICTOR=2 /vsizip/src/Globcover2009_V2.3_Global_.zip/GLOBCOVER_L4_200901_200912_V2.3.tif dist/globcover.tif
 
-upload:
-	@echo Uploading...
-	aws s3 sync --storage-class STANDARD_IA ./dist s3://geofolio-raster-baselayers/globcover/
+globcover.tif: init
+	cd src && wget -c http://due.esrin.esa.int/files/Globcover2009_V2.3_Global_.zip
+	gdal_translate -co -co NUM_THREADS=ALL_CPUS -co TILED=YES -co COMPRESS=DEFLATE -co ZLEVEL=1 -co PREDICTOR=2 \
+		/vsizip/src/Globcover2009_V2.3_Global_.zip/GLOBCOVER_L4_200901_200912_V2.3.tif \
+		dist/globcover.tif
+
+sync:
+	@echo Syncing to S3...
+	aws s3 sync --storage-class STANDARD_IA ./dist s3://geofolio-raster-baselayers/globcover/${VERSION}/
 
 clean:
 	@echo Cleaning up...
