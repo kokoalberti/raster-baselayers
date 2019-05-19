@@ -5,3 +5,4 @@ raster datasets to AWS S3.
 
 * [GlobCover](datasets/globcover/)
 * [WorldClim](datasets/worldclim/)
+* [SoilGrids](datasets/soilgrids/)
