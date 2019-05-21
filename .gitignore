@@ -1,4 +1,5 @@
 .env
+notes.txt
 datasets/*/tmp
 datasets/*/src
 datasets/*/dist
