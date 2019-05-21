@@ -4,10 +4,11 @@ WorldClim is a set of global climate layers (gridded climate data) with a spatia
 
 ## Availability
 
-
-| Layer              | URL                                                                            |
-| ------------------ | ------------------------------------------------------------------------------ |
-| Precipitation      | `s3://geofolio-raster-baselayers/worldclim/v1/prec.tif`                        |
+* `/vsis3/geofolio-raster-baselayers/worldclim/v1/prec.tif`
+* `/vsis3/geofolio-raster-baselayers/worldclim/v1/tavg.tif`
+* `/vsis3/geofolio-raster-baselayers/worldclim/v1/tmin.tif`
+* `/vsis3/geofolio-raster-baselayers/worldclim/v1/tmax.tif`
+* `/vsis3/geofolio-raster-baselayers/worldclim/v1/bio.tif`
 
 ## Processing Notes
 
@@ -20,4 +21,4 @@ WorldClim is a set of global climate layers (gridded climate data) with a spatia
 
 ## More information
 
-[http://worldclim.org/](http://worldclim.org/)
+* [http://worldclim.org/](http://worldclim.org/)

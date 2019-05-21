@@ -4,9 +4,7 @@ GlobCover land cover dataset.
 
 ## Availability
 
-| Layer                               | URL                                                          |
-| ----------------------------------- | ------------------------------------------------------------ |
-| GlobCover Land Cover Classification | `s3://geofolio-raster-baselayers/globcover/v1/globcover.tif` |
+* `/vsis3/geofolio-raster-baselayers/globcover/v1/globcover.tif`
 
 ## Processing Notes
 
@@ -14,4 +12,4 @@ GlobCover land cover dataset.
 
 ## More Information
 
-[http://due.esrin.esa.int/page_globcover.php](http://due.esrin.esa.int/page_globcover.php)
+* [http://due.esrin.esa.int/page_globcover.php](http://due.esrin.esa.int/page_globcover.php)

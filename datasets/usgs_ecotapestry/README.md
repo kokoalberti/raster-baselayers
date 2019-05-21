@@ -2,8 +2,14 @@
 
 USGS Ecotapestry files via LandGIS.
 
+## Availability
+
+* `/vsis3/geofolio-raster-baselayers/usgs_ecotapestry/v1/lithology.tif`
+* `/vsis3/geofolio-raster-baselayers/usgs_ecotapestry/v1/landform.tif`
+
 ## Processing Notes
 
+* Data via LandGIS because original dataset a mess to sort out.
 * See legends at [https://github.com/Envirometrix/LandGISmaps/tree/master/tables](https://github.com/Envirometrix/LandGISmaps/tree/master/tables)
 
 ## More Information
