@@ -7,6 +7,7 @@ raster datasets to AWS S3.
 * [worldclim](datasets/worldclim/)
 * [soilgrids](datasets/soilgrids/)
 * [usgs_ecotapestry](datasets/usgs_ecotapestry)
+* [jaxa_alos_world_30m](datasets/jaxa_alos_world_30m)
 
 # GDAL virtual filesystem links
 
