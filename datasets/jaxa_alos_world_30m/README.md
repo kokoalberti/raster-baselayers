@@ -4,10 +4,7 @@ Just some notes on creating the JAXA ALOS World 30m DEM. It should really be inc
 
 ## Availability
 
-
-| Layer                | URL                                                                            |
-| -------------------- | ------------------------------------------------------------------------------ |
-| `jaxa_alos_world_30m`| `/vsis3/geofolio-public/jaxa_alos_world_30m/jaxa_alos_world_30m.vrt`           |
+* `/vsis3/geofolio-public/jaxa_alos_world_30m/jaxa_alos_world_30m.vrt`
 
 ## Processing Notes
 
@@ -17,5 +14,5 @@ Just some notes on creating the JAXA ALOS World 30m DEM. It should really be inc
 
 ## More information
 
-[https://kokoalberti.com/articles/experiments-with-the-global-jaxa-alos-world-30m-dem-on-aws-s3/](https://kokoalberti.com/articles/experiments-with-the-global-jaxa-alos-world-30m-dem-on-aws-s3/)
-[http://opentopo.sdsc.edu/raster?opentopoID=OTALOS.112016.4326.2](http://opentopo.sdsc.edu/raster?opentopoID=OTALOS.112016.4326.2)
+* [https://kokoalberti.com/articles/experiments-with-the-global-jaxa-alos-world-30m-dem-on-aws-s3/](https://kokoalberti.com/articles/experiments-with-the-global-jaxa-alos-world-30m-dem-on-aws-s3/)
+* [http://opentopo.sdsc.edu/raster?opentopoID=OTALOS.112016.4326.2](http://opentopo.sdsc.edu/raster?opentopoID=OTALOS.112016.4326.2)
