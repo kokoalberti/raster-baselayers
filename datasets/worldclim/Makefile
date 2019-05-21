@@ -107,8 +107,9 @@ bio.tif: init
 		/vsizip/src/wc2.0_30s_bio.zip/wc2.0_bio_30s_17.tif \
 		/vsizip/src/wc2.0_30s_bio.zip/wc2.0_bio_30s_18.tif \
 		/vsizip/src/wc2.0_30s_bio.zip/wc2.0_bio_30s_19.tif
-	# Float64 datatype. Seems excessive, so convert to Float32 and use PREDICTOR=3
-	gdal_translate -co NUM_THREADS=ALL_CPUS -co TILED=YES -co COMPRESS=DEFLATE -co ZLEVEL=1 -co PREDICTOR=3 -ot Float32 tmp/bio.vrt dist/bio.tif
+	# Float64 datatype. Seems excessive, so convert to Float32, use PREDICTOR=3
+	# and use BIGTIFF because the file gets quite large.
+	gdal_translate -co NUM_THREADS=ALL_CPUS -co BIGTIFF=YES -co TILED=YES -co COMPRESS=DEFLATE -co ZLEVEL=1 -co PREDICTOR=3 -ot Float32 tmp/bio.vrt dist/bio.tif
 
 sync: init
 	@echo Syncing to S3...

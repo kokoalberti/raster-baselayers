@@ -1,10 +1,16 @@
 # Globcover
 
-Globcover landcover dataset.
+GlobCover land cover dataset.
 
-## URL
+## Availability
 
-The GlobCover dataset is available at: `s3://geofolio-raster-baselayers/globcover/globcover.tif`
+| Layer                               | URL                                                          |
+| ----------------------------------- | ------------------------------------------------------------ |
+| GlobCover Land Cover Classification | `s3://geofolio-raster-baselayers/globcover/v1/globcover.tif` |
+
+## Processing Notes
+
+* Full color version not included at this time.
 
 ## More Information
 
