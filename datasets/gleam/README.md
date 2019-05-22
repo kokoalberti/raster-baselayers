@@ -4,13 +4,38 @@ GLEAM (Global Land Evaporation Amsterdam Model) global land evaporation componen
 
 ## Availability
 
+Monthly averages: 
+
+* `/vsis3/geofolio-private/gleam/v1/monthly/E.tif`
+* `/vsis3/geofolio-private/gleam/v1/monthly/Eb.tif`
+* `/vsis3/geofolio-private/gleam/v1/monthly/Ei.tif`
+* `/vsis3/geofolio-private/gleam/v1/monthly/Ep.tif`
+* `/vsis3/geofolio-private/gleam/v1/monthly/Es.tif`
+* `/vsis3/geofolio-private/gleam/v1/monthly/Et.tif`
+* `/vsis3/geofolio-private/gleam/v1/monthly/Ew.tif`
+* `/vsis3/geofolio-private/gleam/v1/monthly/S.tif`
+* `/vsis3/geofolio-private/gleam/v1/monthly/SMroot.tif`
+* `/vsis3/geofolio-private/gleam/v1/monthly/SMsurf.tif`
+
+Cumulated monthly averages:
+
+* `/vsis3/geofolio-private/gleam/v1/monthly/E_avg.tif`
+* `/vsis3/geofolio-private/gleam/v1/monthly/Eb_avg.tif`
+* `/vsis3/geofolio-private/gleam/v1/monthly/Ei_avg.tif`
+* `/vsis3/geofolio-private/gleam/v1/monthly/Ep_avg.tif`
+* `/vsis3/geofolio-private/gleam/v1/monthly/Es_avg.tif`
+* `/vsis3/geofolio-private/gleam/v1/monthly/Et_avg.tif`
+* `/vsis3/geofolio-private/gleam/v1/monthly/Ew_avg.tif`
+* `/vsis3/geofolio-private/gleam/v1/monthly/S_avg.tif`
+* `/vsis3/geofolio-private/gleam/v1/monthly/SMroot_avg.tif`
+* `/vsis3/geofolio-private/gleam/v1/monthly/SMsurf_avg.tif`
+
 ## Processing Notes
 
 * Data in NetCDF format from password-protected SFTP site
 * Command-line downloads over SFTP are a pain. See for info: https://stackoverflow.com/questions/5386482/how-to-run-the-sftp-command-with-a-password-from-bash-script
 * So sshpass needs to be installed before this works. FFS why does this have to be so complicated?
 * This seems to work: `sshpass -v -p "v33_GLEAM2019#aw" sftp -oPort=2225 -oStrictHostKeyChecking=no gleamuser@hydras.ugent.be:/data/v3.3b/monthly/E_2003_2018_GLEAM_v3.3b_MO.nc`
-
 
 ## Attribution
 
