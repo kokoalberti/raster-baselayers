@@ -19,7 +19,7 @@ Ubuntu:
 
     # Other handy stuff
     sudo apt-get install -y wget cmake zip unzip python3-dev python3-numpy \
-    python3-pip
+    python3-pip sshpass
 
     # Some Python packages via PyPI
     pip3 install NetCDF4 psycopg2-binary python-dotenv awscli
