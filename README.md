@@ -23,3 +23,10 @@ Ubuntu:
 
     # Some Python packages via PyPI
     pip3 install NetCDF4 psycopg2-binary python-dotenv awscli
+
+And a quick init script to mount instance storage on an AWS processing machine:
+
+    #!/bin/bash
+    sudo mkfs.ext4 -F /dev/nvme0n1 && sudo mount /dev/nvme0n1 /data -t ext4 && sudo chown ubuntu:ubuntu /data
+    cd /data && git clone git@github.com:kokoalberti/raster-baselayers.git
+
