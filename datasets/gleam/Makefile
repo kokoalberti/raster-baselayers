@@ -56,7 +56,7 @@ SMsurf.tif: init
 
 sync:
 	@echo Syncing to S3...
-	aws s3 sync --storage-class STANDARD_IA ./dist s3://${BUCKET}/${DATASET}/${VERSION}/ --dryrun
+	aws s3 sync --storage-class STANDARD_IA ./dist s3://${BUCKET}/${DATASET}/${VERSION}/
 
 clean:
 	@echo Cleaning up...
