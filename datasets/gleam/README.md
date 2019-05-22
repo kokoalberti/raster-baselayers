@@ -32,6 +32,7 @@ Monthly averages 2003-2018 (12 bands):
 
 ## Processing Notes
 
+* Reading NetCDF data in GDAL is a pain: https://gis.stackexchange.com/questions/242270/gdalwarp-netcdf-input-file-has-no-raster-bands?rq=1
 * Data in NetCDF format from password-protected SFTP site
 * Command-line downloads over SFTP are a pain. See for info: https://stackoverflow.com/questions/5386482/how-to-run-the-sftp-command-with-a-password-from-bash-script
 * So sshpass needs to be installed before this works. FFS why does this have to be so complicated?
@@ -45,4 +46,5 @@ Monthly averages 2003-2018 (12 bands):
 
 ## More Information
 
+* [GLEAM v3.3 Readme](README_GLEAM_v33.pdf)
 * [https://www.gleam.eu/](https://www.gleam.eu/)
