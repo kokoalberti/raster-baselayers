@@ -4,7 +4,7 @@ GLEAM (Global Land Evaporation Amsterdam Model) global land evaporation componen
 
 ## Availability
 
-Monthly averages: 
+Monthly values 2003-2018 (192 bands): 
 
 * `/vsis3/geofolio-private/gleam/v1/monthly/E.tif`
 * `/vsis3/geofolio-private/gleam/v1/monthly/Eb.tif`
@@ -17,7 +17,7 @@ Monthly averages:
 * `/vsis3/geofolio-private/gleam/v1/monthly/SMroot.tif`
 * `/vsis3/geofolio-private/gleam/v1/monthly/SMsurf.tif`
 
-Cumulated monthly averages:
+Monthly averages 2003-2018 (12 bands):
 
 * `/vsis3/geofolio-private/gleam/v1/monthly/E_avg.tif`
 * `/vsis3/geofolio-private/gleam/v1/monthly/Eb_avg.tif`
