@@ -19,6 +19,7 @@ HydroSHEDS dataset.
 * Region files will be kept as is (only converted to GTiff) and added to a global .vrt file for the whole dataset to simplify access.
 * There are 3 second versions of the DEM and CON datasets. I'd like to add these, but they are split up into lots of tiles, and mass-downloading these from the dropbox links is not something I want to spend time on now. Will revisit this after a normal download location becomes available again.
 * So it seems like the DEM_15s files are corrupt. There is another DEM_15s_BIL subdirectory in the regular DEM_15s_BIL directory with what looks like versions. Lets use those and try again.
+* Ok so it seems like SOME of the files in the above subdirectory are ALSO corrupt. Removing them, so no AU/CA/SA regions for the DEM until there is a better download location.
 
 ## More Information
 
