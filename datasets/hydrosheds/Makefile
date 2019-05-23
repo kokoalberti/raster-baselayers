@@ -55,13 +55,13 @@ dir_15s.vrt: init
 dem_15s.vrt: init
 	# Download the regions
 	# See processing notes in README.md about these idiotic Dropbox URLS.
-	cd src && wget -O af_dem_15s_bil.zip https://www.dropbox.com/sh/hmpwobbz9qixxpe/AADcjLmRGyWKJYMZAqCd50gsa/HydroSHEDS_DEM/DEM_15s_BIL/af_dem_15s_bil.zip?dl=1
-	cd src && wget -O as_dem_15s_bil.zip https://www.dropbox.com/sh/hmpwobbz9qixxpe/AABDyGGrP60_6yF0z8D3cruWa/HydroSHEDS_DEM/DEM_15s_BIL/as_dem_15s_bil.zip?dl=1
-	cd src && wget -O au_dem_15s_bil.zip https://www.dropbox.com/sh/hmpwobbz9qixxpe/AADJJIO51HB8knJ5KsCV03Ata/HydroSHEDS_DEM/DEM_15s_BIL/au_dem_15s_bil.zip?dl=1
-	cd src && wget -O ca_dem_15s_bil.zip https://www.dropbox.com/sh/hmpwobbz9qixxpe/AACF0C6EUd6Ov72bwrWs7P0ta/HydroSHEDS_DEM/DEM_15s_BIL/ca_dem_15s_bil.zip?dl=1
-	cd src && wget -O eu_dem_15s_bil.zip https://www.dropbox.com/sh/hmpwobbz9qixxpe/AAA28ypSfCJd03YqOlXjostya/HydroSHEDS_DEM/DEM_15s_BIL/eu_dem_15s_bil.zip?dl=1
-	cd src && wget -O na_dem_15s_bil.zip https://www.dropbox.com/sh/hmpwobbz9qixxpe/AADrkgEVzIO2HHpyaPrPP3e3a/HydroSHEDS_DEM/DEM_15s_BIL/na_dem_15s_bil.zip?dl=1
-	cd src && wget -O sa_dem_15s_bil.zip https://www.dropbox.com/sh/hmpwobbz9qixxpe/AAB_dezoaxxxoPFN1x9aUIeBa/HydroSHEDS_DEM/DEM_15s_BIL/sa_dem_15s_bil.zip?dl=1
+	cd src && wget -O af_dem_15s_bil.zip https://www.dropbox.com/sh/hmpwobbz9qixxpe/AAAoInBcRVTvX7JpQEi2YFXca/HydroSHEDS_DEM/DEM_15s_BIL/DEM_15s_BIL/af_dem_15s_bil.zip?dl=1
+	cd src && wget -O as_dem_15s_bil.zip https://www.dropbox.com/sh/hmpwobbz9qixxpe/AACr9LOpYssaD_2VMrya0fhLa/HydroSHEDS_DEM/DEM_15s_BIL/DEM_15s_BIL/as_dem_15s_bil.zip?dl=1
+	cd src && wget -O au_dem_15s_bil.zip https://www.dropbox.com/sh/hmpwobbz9qixxpe/AAAbkCsOF2yos1Ox4r84SCSZa/HydroSHEDS_DEM/DEM_15s_BIL/DEM_15s_BIL/au_dem_15s_bil.zip?dl=1
+	cd src && wget -O ca_dem_15s_bil.zip https://www.dropbox.com/sh/hmpwobbz9qixxpe/AADVkwJrRAuSB23at3dCQsYQa/HydroSHEDS_DEM/DEM_15s_BIL/DEM_15s_BIL/ca_dem_15s_bil.zip?dl=1
+	cd src && wget -O eu_dem_15s_bil.zip https://www.dropbox.com/sh/hmpwobbz9qixxpe/AAAl-QT_KG3lsZ2kO9nF6QqPa/HydroSHEDS_DEM/DEM_15s_BIL/DEM_15s_BIL/eu_dem_15s_bil.zip?dl=1
+	cd src && wget -O na_dem_15s_bil.zip https://www.dropbox.com/sh/hmpwobbz9qixxpe/AABa4NmHmxPdBFX1xpUO86yra/HydroSHEDS_DEM/DEM_15s_BIL/DEM_15s_BIL/na_dem_15s_bil.zip?dl=1
+	cd src && wget -O sa_dem_15s_bil.zip https://www.dropbox.com/sh/hmpwobbz9qixxpe/AAAmBs7l3G4Yj7NltFalqH4pa/HydroSHEDS_DEM/DEM_15s_BIL/DEM_15s_BIL/sa_dem_15s_bil.zip?dl=1
 	# Convert to GTiff
 	mkdir -p dist/dem_15s/
 	gdal_translate /vsizip/src/af_dem_15s_bil.zip/af_dem_15s.bil dist/dem_15s/af_dem_15s.tif -co COMPRESS=LZW -co TILED=YES -co NUM_THREADS=ALL_CPUS

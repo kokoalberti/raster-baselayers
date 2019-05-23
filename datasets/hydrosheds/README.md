@@ -18,6 +18,7 @@ HydroSHEDS dataset.
 * Data is split up into continental regions. `<region>_<dataset>_<resolution>_<format>.zip`, eg `af_acc_15s_bil.zip` Where AF=Africa, NA=North America, EU=Europe, etc. Few different resoltutions for different datasets, will use the highest one. Format we'll use BIL.
 * Region files will be kept as is (only converted to GTiff) and added to a global .vrt file for the whole dataset to simplify access.
 * There are 3 second versions of the DEM and CON datasets. I'd like to add these, but they are split up into lots of tiles, and mass-downloading these from the dropbox links is not something I want to spend time on now. Will revisit this after a normal download location becomes available again.
+* So it seems like the DEM_15s files are corrupt. There is another DEM_15s_BIL subdirectory in the regular DEM_15s_BIL directory with what looks like versions. Lets use those and try again.
 
 ## More Information
 
