@@ -9,7 +9,7 @@ raster datasets to AWS S3.
 * [usgs_ecotapestry](datasets/usgs_ecotapestry/)
 * [jaxa_alos_world_30m](datasets/jaxa_alos_world_30m/)
 * [gleam](datasets/gleam/)
-* [hydrosheds](datesets/hydrosheds/)
+* [hydrosheds](datasets/hydrosheds/)
 
 A couple of things need to be installed for all of the Makefiles to work. On 
 Ubuntu:
