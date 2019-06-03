@@ -1,6 +1,6 @@
 # raster-baselayers
 
-Set of Makefiles to download and convert a selection of public raster datasets to optimized GeoTIFF files.
+Collection of Makefiles to download and convert a public raster datasets to optimized GeoTIFF files. Currently available:
 
 * [globcover](datasets/globcover/)
 * [worldclim](datasets/worldclim/)
@@ -41,6 +41,15 @@ After which they should be synced to an S3 bucket:
     $ aws s3 ls s3://testbucket82167/usgs_ecotapestry/v1/
     2019-06-03 12:44:39  685989402 landform.tif
     2019-06-03 12:42:21  248511506 lithology.tif
+    $
+
+Where you can access them from anywhere using GDAL's virtual filesystems:
+
+    $ gdalinfo /vsis3/testbucket82167/usgs_ecotapestry/v1/landform.tif
+    Driver: GTiff/GeoTIFF
+    Files: /vsis3/testbucket82167/usgs_ecotapestry/v1/landform.tif
+    Size is 172800, 71698
+    (...)
     $
 
 ## Notes
