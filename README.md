@@ -30,7 +30,7 @@ The optimized GTiff files are created in the `dist` subdirectory:
 
 The files can be used as it, or to sync to an S3 bucket use `make sync BUCKET=<bucketname>`:
 
-    $ cd datasets/usgs_ecotapestry && make sync BUCKET=testbucket_82167
+    $ cd datasets/usgs_ecotapestry && make sync BUCKET=testbucket82167
     (...)
     upload: dist/lithology.tif to s3://testbucket82167/usgs_ecotapestry/v1/lithology.tif
     upload: dist/landform.tif to s3://testbucket82167/usgs_ecotapestry/v1/landform.tif
