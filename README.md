@@ -1,7 +1,6 @@
 # raster-baselayers
 
-Set of Makefiles to download, optimize, and upload a selection of public
-raster datasets to AWS S3. 
+Set of Makefiles to download and optimize selection of public raster datasets. 
 
 * [globcover](datasets/globcover/)
 * [worldclim](datasets/worldclim/)
@@ -10,6 +9,39 @@ raster datasets to AWS S3.
 * [jaxa_alos_world_30m](datasets/jaxa_alos_world_30m/)
 * [gleam](datasets/gleam/)
 * [hydrosheds](datasets/hydrosheds/)
+
+## Usage
+
+Run `make` in a dataset directory to download and create an optimized version of the dataset:
+
+    $ cd datasets/usgs_ecotapesty && make
+    (...)
+    $
+
+The optimized GTiff files are created in the `dist` subdirectory:
+
+    $ ls -sh datasets/usgs_ecotapestry/dist
+    655M landform.tif  238M lithology.tif
+    $
+
+The files can be used as it, or to sync to an S3 bucket use `make sync BUCKET=<bucketname>`:
+
+    $ cd datasets/usgs_ecotapestry && make sync BUCKET=testbucket_82167
+    (...)
+    upload: dist/lithology.tif to s3://testbucket82167/usgs_ecotapestry/v1/lithology.tif
+    upload: dist/landform.tif to s3://testbucket82167/usgs_ecotapestry/v1/landform.tif
+    $
+
+After which they should be synced to an S3 bucket:
+
+    $ aws s3 ls s3://testbucket82167/usgs_ecotapestry/v1/
+    2019-06-03 12:44:39  685989402 landform.tif
+    2019-06-03 12:42:21  248511506 lithology.tif
+    $
+
+## Notes
+
+### Prerequisites
 
 A couple of things need to be installed for all of the Makefiles to work. On 
 Ubuntu:
@@ -26,7 +58,14 @@ Ubuntu:
     # Some Python packages via PyPI
     pip3 install NetCDF4 psycopg2-binary python-dotenv awscli
 
-And a quick init script to mount instance storage on an AWS processing machine:
+    # Configure aws credentials
+    aws configure
+
+### Using a temporary EC2 instance to do processing
+
+It's usually faster to do this type of processing (especially syncing to S3) on a temporary EC2 instance. 
+
+Shell script to mount instance storage on an AWS processing machine:
 
     #!/bin/bash
     sudo mkfs.ext4 -F /dev/nvme0n1 && sudo mount /dev/nvme0n1 /data -t ext4 && sudo chown ubuntu:ubuntu /data
