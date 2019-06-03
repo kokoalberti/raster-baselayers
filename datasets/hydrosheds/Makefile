@@ -1,8 +1,7 @@
 DATASET=hydrosheds
 VERSION=v1
-BUCKET=geofolio-public
 
-all: process sync clean
+all: process
 
 init:
 	mkdir -p src tmp dist
@@ -74,11 +73,11 @@ dem_15s.vrt: init
 	gdalbuildvrt dist/dem_15s.vrt dist/dem_15s/*.tif
 
 sync:
-	@echo Syncing to S3...
+	test $(BUCKET)
+	@echo Syncing to s3://${BUCKET}/${DATASET}/${VERSION}/
+	aws s3 mb s3://${BUCKET}/ || true
 	aws s3 sync --storage-class STANDARD_IA ./dist s3://${BUCKET}/${DATASET}/${VERSION}/
 
 clean:
 	@echo Cleaning up...
-	rm -rf src
-	rm -rf tmp
-	rm -rf dist
+	rm -rf src tmp dist

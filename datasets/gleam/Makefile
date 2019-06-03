@@ -1,8 +1,7 @@
 DATASET=gleam
 VERSION=v1
-BUCKET=geofolio-private
 
-all: process sync clean
+all: process
 
 init:
 	mkdir -p src tmp dist dist/monthly/
@@ -55,11 +54,11 @@ SMsurf.tif: init
 	python3 gleam-nc2tif.py ./src/SMsurf_2003_2018_GLEAM_v3.3b_MO.nc ./dist/monthly/SMsurf.tif --monthly ./dist/monthly/SMsurf_avg.tif
 
 sync:
-	@echo Syncing to S3...
+	test $(BUCKET)
+	@echo Syncing to s3://${BUCKET}/${DATASET}/${VERSION}/
+	aws s3 mb s3://${BUCKET}/ || true
 	aws s3 sync --storage-class STANDARD_IA ./dist s3://${BUCKET}/${DATASET}/${VERSION}/
 
 clean:
 	@echo Cleaning up...
-	rm -rf src
-	rm -rf tmp
-	rm -rf dist
+	rm -rf src tmp dist

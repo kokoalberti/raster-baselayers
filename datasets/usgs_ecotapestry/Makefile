@@ -1,6 +1,7 @@
+DATASET=usgs_ecotapestry
 VERSION=v1
 
-all: process sync clean
+all: process
 
 init:
 	mkdir -p src tmp dist
@@ -16,7 +17,10 @@ landform.tif: init
 	gdal_translate -co NUM_THREADS=ALL_CPUS -co TILED=YES -co COMPRESS=DEFLATE -co ZLEVEL=1 -co PREDICTOR=2 src/landform.tif dist/landform.tif
 
 sync:
-	aws s3 sync --storage-class STANDARD_IA ./dist s3://geofolio-raster-baselayers/usgs_ecotapestry/${VERSION}/
+	test $(BUCKET)
+	@echo Syncing to s3://${BUCKET}/${DATASET}/${VERSION}/
+	aws s3 mb s3://${BUCKET}/ || true
+	aws s3 sync --storage-class STANDARD_IA ./dist s3://${BUCKET}/${DATASET}/${VERSION}/
 
 clean:
 	rm -rf src tmp dist

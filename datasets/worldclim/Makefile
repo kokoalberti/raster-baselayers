@@ -1,6 +1,7 @@
+DATASET=worldclim
 VERSION=v1
 
-all: process sync clean
+all: process
 
 init:
 	mkdir -p src tmp dist
@@ -111,12 +112,12 @@ bio.tif: init
 	# and use BIGTIFF because the file gets quite large.
 	gdal_translate -co NUM_THREADS=ALL_CPUS -co BIGTIFF=YES -co TILED=YES -co COMPRESS=DEFLATE -co ZLEVEL=1 -co PREDICTOR=3 -ot Float32 tmp/bio.vrt dist/bio.tif
 
-sync: init
-	@echo Syncing to S3...
-	aws s3 sync --storage-class STANDARD_IA ./dist s3://geofolio-raster-baselayers/worldclim/${VERSION}/
+sync:
+	test $(BUCKET)
+	@echo Syncing to s3://${BUCKET}/${DATASET}/${VERSION}/
+	aws s3 mb s3://${BUCKET}/ || true
+	aws s3 sync --storage-class STANDARD_IA ./dist s3://${BUCKET}/${DATASET}/${VERSION}/
 
 clean:
 	@echo Cleaning up...
-	rm -rf src
-	rm -rf tmp
-	rm -rf dist
+	rm -rf src tmp dist

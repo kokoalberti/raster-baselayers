@@ -1,6 +1,7 @@
+DATASET=globcover
 VERSION=v1
 
-all: process sync clean
+all: process
 
 init:
 	mkdir -p src tmp dist
@@ -15,11 +16,11 @@ globcover.tif: init
 		dist/globcover.tif
 
 sync:
-	@echo Syncing to S3...
-	aws s3 sync --storage-class STANDARD_IA ./dist s3://geofolio-raster-baselayers/globcover/${VERSION}/
+	test $(BUCKET)
+	@echo Syncing to s3://${BUCKET}/${DATASET}/${VERSION}/
+	aws s3 mb s3://${BUCKET}/ || true
+	aws s3 sync --storage-class STANDARD_IA ./dist s3://${BUCKET}/${DATASET}/${VERSION}/
 
 clean:
 	@echo Cleaning up...
-	rm -rf src
-	rm -rf tmp
-	rm -rf dist
+	rm -rf src tmp dist

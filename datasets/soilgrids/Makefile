@@ -1,6 +1,7 @@
+DATASET=soilgrids
 VERSION=v1
 
-all: process sync clean
+all: process
 
 init:
 	mkdir -p src tmp dist
@@ -36,7 +37,10 @@ bulk-density.tif: init
 	gdal_translate -co NUM_THREADS=ALL_CPUS -co TILED=YES -co COMPRESS=DEFLATE -co ZLEVEL=1 -co PREDICTOR=2 src/bulk-density.tif dist/bulk-density.tif
 
 sync:
-	aws s3 sync --storage-class STANDARD_IA ./dist s3://geofolio-raster-baselayers/soilgrids/${VERSION}/
+	test $(BUCKET)
+	@echo Syncing to s3://${BUCKET}/${DATASET}/${VERSION}/
+	aws s3 mb s3://${BUCKET}/ || true
+	aws s3 sync --storage-class STANDARD_IA ./dist s3://${BUCKET}/${DATASET}/${VERSION}/
 
 clean:
 	rm -rf src tmp dist

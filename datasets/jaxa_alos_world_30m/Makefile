@@ -1,7 +1,7 @@
+DATASET=jaxa_alos_world_30m
 VERSION=v1
-BUCKET=geofolio-public
 
-all: download process sync clean
+all: process
 
 init:
 	mkdir -p src tmp dist dist/tiles
@@ -16,7 +16,10 @@ process:
 	# - Create a vrt containing all the index vrts in dist/jaxa_alos_world_30m.vrt
 
 sync:
-	# - Sync dist directory to geofolio-public bucket
+	test $(BUCKET)
+	@echo Syncing to s3://${BUCKET}/${DATASET}/${VERSION}/
+	aws s3 mb s3://${BUCKET}/ || true
+	aws s3 sync --storage-class STANDARD_IA ./dist s3://${BUCKET}/${DATASET}/${VERSION}/
 
 clean:
 	rm -rf src tmp dist
