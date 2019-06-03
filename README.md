@@ -1,6 +1,6 @@
 # raster-baselayers
 
-Set of Makefiles to download and optimize selection of public raster datasets. 
+Set of Makefiles to download and convert a selection of public raster datasets to optimized GeoTIFF files.
 
 * [globcover](datasets/globcover/)
 * [worldclim](datasets/worldclim/)
