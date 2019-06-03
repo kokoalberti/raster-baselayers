@@ -2,9 +2,9 @@
 
 Just some notes on creating the JAXA ALOS World 30m DEM. It should really be included in this repo, but havent sorted it out properly yet.
 
-## Availability
+## Outputs
 
-* `/vsis3/geofolio-public/jaxa_alos_world_30m/jaxa_alos_world_30m.vrt`
+* `jaxa_alos_world_30m.vrt`
 
 ## Processing Notes
 

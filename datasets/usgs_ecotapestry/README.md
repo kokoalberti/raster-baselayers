@@ -2,10 +2,10 @@
 
 USGS Ecotapestry files via LandGIS.
 
-## Availability
+## Outputs
 
-* `/vsis3/geofolio-raster-baselayers/usgs_ecotapestry/v1/lithology.tif`
-* `/vsis3/geofolio-raster-baselayers/usgs_ecotapestry/v1/landform.tif`
+* `lithology.tif`
+* `landform.tif`
 
 ## Processing Notes
 

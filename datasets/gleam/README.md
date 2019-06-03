@@ -2,33 +2,33 @@
 
 GLEAM (Global Land Evaporation Amsterdam Model) global land evaporation components.
 
-## Availability
+## Outputs
 
 Monthly values 2003-2018 (192 bands): 
 
-* `/vsis3/geofolio-private/gleam/v1/monthly/E.tif`
-* `/vsis3/geofolio-private/gleam/v1/monthly/Eb.tif`
-* `/vsis3/geofolio-private/gleam/v1/monthly/Ei.tif`
-* `/vsis3/geofolio-private/gleam/v1/monthly/Ep.tif`
-* `/vsis3/geofolio-private/gleam/v1/monthly/Es.tif`
-* `/vsis3/geofolio-private/gleam/v1/monthly/Et.tif`
-* `/vsis3/geofolio-private/gleam/v1/monthly/Ew.tif`
-* `/vsis3/geofolio-private/gleam/v1/monthly/S.tif`
-* `/vsis3/geofolio-private/gleam/v1/monthly/SMroot.tif`
-* `/vsis3/geofolio-private/gleam/v1/monthly/SMsurf.tif`
+* `monthly/E.tif`
+* `monthly/Eb.tif`
+* `monthly/Ei.tif`
+* `monthly/Ep.tif`
+* `monthly/Es.tif`
+* `monthly/Et.tif`
+* `monthly/Ew.tif`
+* `monthly/S.tif`
+* `monthly/SMroot.tif`
+* `monthly/SMsurf.tif`
 
 Monthly averages 2003-2018 (12 bands):
 
-* `/vsis3/geofolio-private/gleam/v1/monthly/E_avg.tif`
-* `/vsis3/geofolio-private/gleam/v1/monthly/Eb_avg.tif`
-* `/vsis3/geofolio-private/gleam/v1/monthly/Ei_avg.tif`
-* `/vsis3/geofolio-private/gleam/v1/monthly/Ep_avg.tif`
-* `/vsis3/geofolio-private/gleam/v1/monthly/Es_avg.tif`
-* `/vsis3/geofolio-private/gleam/v1/monthly/Et_avg.tif`
-* `/vsis3/geofolio-private/gleam/v1/monthly/Ew_avg.tif`
-* `/vsis3/geofolio-private/gleam/v1/monthly/S_avg.tif`
-* `/vsis3/geofolio-private/gleam/v1/monthly/SMroot_avg.tif`
-* `/vsis3/geofolio-private/gleam/v1/monthly/SMsurf_avg.tif`
+* `monthly/E_avg.tif`
+* `monthly/Eb_avg.tif`
+* `monthly/Ei_avg.tif`
+* `monthly/Ep_avg.tif`
+* `monthly/Es_avg.tif`
+* `monthly/Et_avg.tif`
+* `monthly/Ew_avg.tif`
+* `monthly/S_avg.tif`
+* `monthly/SMroot_avg.tif`
+* `monthly/SMsurf_avg.tif`
 
 ## Processing Notes
 

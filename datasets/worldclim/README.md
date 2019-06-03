@@ -2,13 +2,13 @@
 
 WorldClim is a set of global climate layers (gridded climate data) with a spatial resolution of about 1 km2. These data can be used for mapping and spatial modeling. 
 
-## Availability
+## Outputs
 
-* `/vsis3/geofolio-raster-baselayers/worldclim/v1/prec.tif`
-* `/vsis3/geofolio-raster-baselayers/worldclim/v1/tavg.tif`
-* `/vsis3/geofolio-raster-baselayers/worldclim/v1/tmin.tif`
-* `/vsis3/geofolio-raster-baselayers/worldclim/v1/tmax.tif`
-* `/vsis3/geofolio-raster-baselayers/worldclim/v1/bio.tif`
+* `prec.tif`
+* `tavg.tif`
+* `tmin.tif`
+* `tmax.tif`
+* `bio.tif`
 
 ## Processing Notes
 

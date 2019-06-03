@@ -2,11 +2,11 @@
 
 HydroSHEDS dataset.
 
-## Availability
+## Outputs
 
-* `/vsis3/geofolio-public/hydrosheds/dem_15s.vrt`
-* `/vsis3/geofolio-public/hydrosheds/dir_15s.vrt`
-* `/vsis3/geofolio-public/hydrosheds/acc_15s.vrt`
+* `dem_15s.vrt`
+* `dir_15s.vrt`
+* `acc_15s.vrt`
 
 ## Processing Notes
 

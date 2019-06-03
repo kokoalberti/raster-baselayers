@@ -2,15 +2,15 @@
 
 Soil grids soil information.
 
-## Availability
+## Outputs
 
-* `/vsis3/geofolio-raster-baselayers/soilgrids/v1/texture_0cm.tif`
-* `/vsis3/geofolio-raster-baselayers/soilgrids/v1/sandfrac_0cm.tif`
-* `/vsis3/geofolio-raster-baselayers/soilgrids/v1/siltfrac_0cm.tif`
-* `/vsis3/geofolio-raster-baselayers/soilgrids/v1/clayfrac_0cm.tif`
-* `/vsis3/geofolio-raster-baselayers/soilgrids/v1/ph.tif`
-* `/vsis3/geofolio-raster-baselayers/soilgrids/v1/organic-carbon.tif`
-* `/vsis3/geofolio-raster-baselayers/soilgrids/v1/bulk-density.tif`
+* `texture_0cm.tif`
+* `sandfrac_0cm.tif`
+* `siltfrac_0cm.tif`
+* `clayfrac_0cm.tif`
+* `ph.tif`
+* `organic-carbon.tif`
+* `bulk-density.tif`
 
 ## Processing Notes
 
@@ -21,5 +21,5 @@ Soil grids soil information.
 
 ## More Information
 
-[https://github.com/Envirometrix/LandGISmaps#soil-properties-and-classes](https://github.com/Envirometrix/LandGISmaps#soil-properties-and-classes)
-[http://soilgrids.org](http://soilgrids.org)
+* [https://github.com/Envirometrix/LandGISmaps#soil-properties-and-classes](https://github.com/Envirometrix/LandGISmaps#soil-properties-and-classes)
+* [http://soilgrids.org](http://soilgrids.org)

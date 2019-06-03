@@ -2,9 +2,9 @@
 
 GlobCover land cover dataset.
 
-## Availability
+## Outputs
 
-* `/vsis3/geofolio-raster-baselayers/globcover/v1/globcover.tif`
+* `globcover.tif`
 
 ## Processing Notes
 
