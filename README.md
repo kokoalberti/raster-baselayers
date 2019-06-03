@@ -10,7 +10,7 @@ Set of Makefiles to download and convert a selection of public raster datasets t
 * [gleam](datasets/gleam/)
 * [hydrosheds](datasets/hydrosheds/)
 
-These are mostly for personal use, so the files and repo are not very polished at the moment. Use at your own risk.
+These are mostly for personal use, so the files and repo are not very polished at the moment. Use at your own risk, I'm making it public just in case it's useful for anyone.
 
 See also PostGIS Baselayers, a sister project for vector data at [https://github.com/kokoalberti/postgis-baselayers](https://github.com/kokoalberti/postgis-baselayers).
 
