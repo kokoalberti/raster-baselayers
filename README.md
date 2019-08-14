@@ -9,6 +9,7 @@ Collection of Makefiles to download and convert a public raster datasets to opti
 * [jaxa_alos_world_30m](datasets/jaxa_alos_world_30m/)
 * [gleam](datasets/gleam/)
 * [hydrosheds](datasets/hydrosheds/)
+* [esa_cci_landcover](datasets/esa_cci_landcover/)
 
 These are mostly for personal use, so the files and repo are not very polished at the moment. Use at your own risk, I'm making it public just in case it's useful for anyone.
 
@@ -66,7 +67,7 @@ Ubuntu:
 
     # Other handy stuff
     sudo apt-get install -y wget cmake zip unzip python3-dev python3-numpy \
-    python3-pip sshpass awscli
+    python3-pip sshpass awscli p7zip-full
 
     # Some Python packages via PyPI
     pip3 install NetCDF4 psycopg2-binary python-dotenv
