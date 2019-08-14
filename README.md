@@ -61,17 +61,17 @@ Ubuntu:
 
     # GIS utilities from ubuntugis-unstable
     sudo add-apt-repository -y ppa:ubuntugis/ubuntugis-unstable && \
-    apt-get update -y && \
-    apt-get install -y gdal-bin python3-gdal python3-shapely
+    sudo apt-get update -y && \
+    sudo apt-get install -y gdal-bin python3-gdal python3-shapely
 
     # Other handy stuff
     sudo apt-get install -y wget cmake zip unzip python3-dev python3-numpy \
-    python3-pip sshpass
+    python3-pip sshpass awscli
 
     # Some Python packages via PyPI
-    pip3 install NetCDF4 psycopg2-binary python-dotenv awscli
+    pip3 install NetCDF4 psycopg2-binary python-dotenv
 
-    # Configure aws credentials
+    # Configure aws credentials for easy s3 syncing
     aws configure
 
 ### Using a temporary EC2 instance to do processing
@@ -81,6 +81,6 @@ It's usually faster to do this type of processing (especially syncing to S3) on 
 Shell script to mount instance storage on an AWS processing machine:
 
     #!/bin/bash
-    sudo mkfs.ext4 -F /dev/nvme0n1 && sudo mount /dev/nvme0n1 /data -t ext4 && sudo chown ubuntu:ubuntu /data
+    sudo mkfs.ext4 -F /dev/nvme0n1 && sudo mkdir /data && sudo mount /dev/nvme0n1 /data -t ext4 && sudo chown ubuntu:ubuntu /data
     cd /data && git clone git@github.com:kokoalberti/raster-baselayers.git
 
