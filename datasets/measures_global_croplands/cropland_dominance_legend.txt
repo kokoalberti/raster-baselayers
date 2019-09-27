@@ -1,0 +1,10 @@
+0   Ocean   Ocean or Water areas
+1   Irrigated   Wheat and Rice
+2   Irrigated Mixed Crops 1     Wheat, Rice, Barley, Soybeans
+3   Irrigated Mixed Crops 2     Wheat, Rice, Cotton, Orchards
+4   Rainfed     Wheat, Rice, Soybeans, Surgarcane, Corn, Cassava
+5   Rainfed     Wheat, Barley
+6   Rainfed     Corn, Soybeans
+7   Rainfed Mixed Crops     Wheat, Corn, Rice, Barley, Soybeans
+8   Fractions of Mixed Crops    Wheat, Maize, Rice, Barley, Soybeans
+9   Non-Cropland    Non-Cropland areas

@@ -10,6 +10,7 @@ Collection of Makefiles to download and convert a public raster datasets to opti
 * [gleam](datasets/gleam/)
 * [hydrosheds](datasets/hydrosheds/)
 * [esa_cci_landcover](datasets/esa_cci_landcover/)
+* [measures_global_cropland](datasets/measures_global_cropland/)
 
 These are mostly for personal use, so the files and repo are not very polished at the moment. Use at your own risk, I'm making it public just in case it's useful for anyone.
 
